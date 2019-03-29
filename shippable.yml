@@ -1,9 +1,9 @@
 resources:
   - name: sample_node_repo
     type: gitRepo
-    repoPath: ankul-shippable/sample_node
+    repoPath: jatindogra/sample-repo
     configuration:
-      integrationName: github-subint
+      integrationName: github
       branches:
         except: "*test"
         only: "master*"
@@ -77,7 +77,8 @@ pipelines:
            # - nightlyJob
             #- cronJob
           integrations:
-            - github-subint
+            - github
+            - docker
         triggeredBy:
           resources:
             - sample_node_repo
