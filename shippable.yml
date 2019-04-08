@@ -10,7 +10,13 @@ resources:
 pipelines:
   - name: pipe_1
     setup:
-      runtime: image
+      runtime:
+        type: image
+        image:
+          custom:
+            name: drydock/u16microbase
+            tag: v7.2.4
+      
     steps:
       - name: step1_A
         type: bash
@@ -19,6 +25,10 @@ pipelines:
         setup:
           runtime:
             type: image
+            image:
+              custom:
+                name: drydock/u16microbase
+                tag: v7.1.4
         triggeredBy:
           resources:
             - gitrepo_res 
