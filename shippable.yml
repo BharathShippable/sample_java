@@ -28,7 +28,7 @@ pipelines:
             image:
               custom:
                 name: drydock/u14microbase
-                tag: v6.2.4
+                tag: latest
         triggeredBy:
           resources:
             - gitrepo_res_1
