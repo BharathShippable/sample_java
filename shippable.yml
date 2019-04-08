@@ -33,4 +33,4 @@ pipelines:
             - gitrepo_res 
         execution:
           onExecute:
-            - echo "executing step1_A..."
+            - llk
