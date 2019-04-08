@@ -24,10 +24,15 @@ pipelines:
           affinityGroup: test_group 
         setup:
           runtime:
-            type: host
+            type: image
+            image:
+              custom:
+                name: drydock/u14microbase
+                tag: v6.2.4
         triggeredBy:
           resources:
             - gitrepo_res_1
         execution:
           onExecute:
-            - llk
+            - echo hi
+            - printenv
