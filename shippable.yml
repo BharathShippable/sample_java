@@ -25,10 +25,6 @@ pipelines:
         setup:
           runtime:
             type: image
-            image:
-              auto:
-                language: nodejs
-                version: v8.11.3
         triggeredBy:
           resources:
             - gitrepo_res 
