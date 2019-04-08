@@ -26,9 +26,9 @@ pipelines:
           runtime:
             type: image
             image:
-              custom:
-                name: drydock/u14microbase
-                tag: latest
+              auto:
+                language: nodejs
+                version: v8.11.3
         triggeredBy:
           resources:
             - gitrepo_res_1
