@@ -10,14 +10,15 @@ resources:
 pipelines:
   - name: pipe_1
     setup:
-      runtime: onHost
+      runtime: host
     steps:
       - name: step1_A
         type: bash
         configuration:
           affinityGroup: test_group 
         setup:
-          runtime: host
+          runtime:
+            type: host
         triggeredBy:
           resources:
             - gitrepo_res 
