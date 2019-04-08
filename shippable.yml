@@ -1,5 +1,5 @@
 resources:
-  - name: gitrepo_res
+  - name: gitrepo_res_1
     type: gitRepo
     repoPath: bharath92/sample_java
     configuration:
@@ -27,7 +27,7 @@ pipelines:
             type: image
         triggeredBy:
           resources:
-            - gitrepo_res 
+            - gitrepo_res_1
         execution:
           onExecute:
             - llk
