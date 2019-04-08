@@ -1,14 +1,14 @@
 resources:
   - name: gitrepo_res
     type: gitRepo
-    repoPath: jatindogra/sample_java
+    repoPath: bharath92/sample_java
     configuration:
-      integrationName: github
+      integrationName: bharath-shippable
     initialVersion:
       sha: master
 
 pipelines:
-  - name: pipe_1
+  - name: pipe_1_1
     setup:
       runtime:
         type: image
@@ -18,7 +18,7 @@ pipelines:
             tag: v7.2.4
       
     steps:
-      - name: step1_A
+      - name: step1
         type: bash
         configuration:
           affinityGroup: test_group 
