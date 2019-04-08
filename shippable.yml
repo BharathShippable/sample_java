@@ -10,7 +10,7 @@ resources:
 pipelines:
   - name: pipe_1
     setup:
-      runtime: host
+      runtime: image
     steps:
       - name: step1_A
         type: bash
@@ -18,7 +18,7 @@ pipelines:
           affinityGroup: test_group 
         setup:
           runtime:
-            type: host
+            type: image
         triggeredBy:
           resources:
             - gitrepo_res 
