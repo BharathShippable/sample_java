@@ -17,7 +17,7 @@ pipelines:
         configuration:
           affinityGroup: test_group 
         setup:
-          runtime: onHost
+          runtime: host
         triggeredBy:
           resources:
             - gitrepo_res 
