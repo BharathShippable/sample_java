@@ -24,7 +24,7 @@ pipelines:
           affinityGroup: test_group 
         setup:
           runtime:
-            type: image
+            type: host
         triggeredBy:
           resources:
             - gitrepo_res_1
